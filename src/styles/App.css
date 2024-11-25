@@ -1,0 +1,42 @@
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  min-width: 10px;
+  min-height: 30px;
+  background-color: rgb(255, 255, 255);
+}
+
+h3,
+h4 {
+  margin: 10px;
+}
+.btnGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btnGroup button {
+  min-width: 30px;
+  background-color: transparent;
+  border: 1px solid rgb(184, 174, 174);
+  margin: 5px;
+  color: firebrick;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.btnGroup button:hover {
+  box-shadow: 2px 2px 5px #000;
+}
+
+.btnGroup button:focus,
+button:focus-visible {
+  outline: none;
+}

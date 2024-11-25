@@ -1,13 +1,19 @@
-import React from 'react'
+import CardStyles from "../styles/Card.module.css";
+import { Link } from 'react-router-dom';
 
-const Card = ({data}) => {
+const Card = ({ beer }) => {
+  const { price, name, image, id } = beer;
+
+
   return (
-    <div className='card'>
-        <h3>{data.name}</h3>
-        <p>{data.tagline}</p>
-        <img src={data.image_url} alt="beer-detail" />
+    <div className={CardStyles.cardContainer}>
+      <Link to={`/beer/${id}`}>
+        <img src={image} alt="beer-detail" />
+        <h3>{name}</h3>
+      </Link>
+      <h4>{price}</h4>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
